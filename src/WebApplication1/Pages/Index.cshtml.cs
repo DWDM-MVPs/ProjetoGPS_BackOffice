@@ -22,7 +22,7 @@ namespace WebApplication1.Pages
 
 		public string GetApplications()
 		{
-			var client = new RestClient("https://localhost:44387/api/applications/list/0");
+			var client = new RestClient(ApiEndpoint + "applications/list/0");
 			client.Timeout = -1;
 			var request = new RestRequest(Method.GET);
 			IRestResponse response = client.Execute(request);
