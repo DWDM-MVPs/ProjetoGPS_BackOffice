@@ -1,7 +1,7 @@
 ﻿@page
-@model IndexModel
+@model ProjetoGPS_BackOffice.Pages.SugestoesModel
 @{
-    ViewData["Title"] = "Candidaturas";
+    ViewData["Title"] = "Sugestões";
 }
 
 <div>
@@ -20,12 +20,12 @@
 	<!-- TABS END -->
 	<!-- APPLICATIONS START -->
 	<div class="tab-content" id="myTabContent">
-		<!-- CANDIDATURAS PENDENTES -->
+		<!-- SUJESTÕES PENDENTES -->
 		<div class="tab-pane fade show active margin" id="pendentes" role="tabpanel" aria-labelledby="pendentes-tab">
-			<h3>⏰ Candidaturas Pendentes</h3>
+			<h3>⏰ Sugestões Pendentes</h3>
 			@if (Model.code.Pending.Length == 0)
 			{
-				<a>Não há candidaturas pendentes.</a>
+				<a>Não há sugestões pendentes.</a>
 			}
 			else
 			{
@@ -65,12 +65,12 @@
 				</div>
 			}
 		</div>
-		<!-- CANDIDATURAS ACEITES -->
+		<!-- SUJESTÕES ACEITES -->
 		<div class="tab-pane fade margin" id="aceites" role="tabpanel" aria-labelledby="aceites-tab">
-			<h3>✔️ Candidaturas Aceites</h3>
+			<h3>✔️ Sugestões Aceites</h3>
 			@if (Model.code.Accepted.Length == 0)
 			{
-				<a>Não há candidaturas aceites.</a>
+				<a>Não há sugestões aceites.</a>
 			}
 			else
 			{
@@ -110,12 +110,12 @@
 				</div>
 			}
 		</div>
-		<!-- CANDIDATURAS RECUSADAS -->
+		<!-- SUJESTÕES RECUSADAS -->
 		<div class="tab-pane fade margin" id="recusadas" role="tabpanel" aria-labelledby="recusadas-tab">
-			<h3>❌ Candidaturas Recusadas</h3>
+			<h3>❌ Sugestões Recusadas</h3>
 			@if (Model.code.Rejected.Length == 0)
 			{
-				<a>Não há candidaturas aceites.</a>
+				<a>Não há sugestões rejeitadas.</a>
 			}
 			else
 			{

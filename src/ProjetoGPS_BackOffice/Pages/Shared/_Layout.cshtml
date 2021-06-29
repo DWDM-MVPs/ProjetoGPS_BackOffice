@@ -29,12 +29,73 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarText">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="/Index">📝 Candidaturas</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/Definicoes">⚙️ Definições</a>
-					</li>
+					@if (ViewData["Title"]=="Candidaturas")
+					{
+						<li class="nav-item active">
+							<a class="nav-link" href="/Index">📝 Candidaturas</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item">
+							<a class="nav-link" href="/Index">📝 Candidaturas</a>
+						</li>
+					}
+
+					@if (ViewData["Title"]=="Dúvidas")
+					{
+						<li class="nav-item active">
+							<a class="nav-link" href="/Duvidas">❓ Dúvidas</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item">
+							<a class="nav-link" href="/Duvidas">❓ Dúvidas</a>
+						</li>
+					}
+
+					@if (ViewData["Title"]=="Sugestões")
+					{
+						<li class="nav-item active">
+							<a class="nav-link" href="/Sugestoes">🔹 Sugestões</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item">
+							<a class="nav-link" href="/Sugestoes">🔹 Sugestões</a>
+						</li>
+					}
+
+					@if (ViewData["Title"]=="Definições")
+					{
+						<li class="nav-item active">
+							<a class="nav-link" href="/Definicoes">⚙️ Definições</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item">
+							<a class="nav-link" href="/Definicoes">⚙️ Definições</a>
+						</li>
+					}
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+				<ul class="navbar-nav">
+					@if (ViewData["login"] != null)
+					{
+						<li class="nav-item active">
+							<a class="nav-link">Logout</a>
+						</li>
+					}
+					else
+					{
+						<li class="nav-item active">
+							<a class="nav-link">Login</a>
+						</li>
+					}
 				</ul>
 			</div>
 		</nav>
@@ -45,13 +106,3 @@
 	</div>
 </body>
 </html>
-
-
-@if (ViewData["alert"] != null)
-{
-	<script type="text/javascript">
-		window.onload = function () {
-			alert("@ViewData["alert"]");
-		};
-	</script>
-}

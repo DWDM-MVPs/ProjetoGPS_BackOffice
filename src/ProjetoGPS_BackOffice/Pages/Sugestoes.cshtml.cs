@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ProjetoGPS_BackOffice.Pages
 {
-	public class IndexModel : PageModel
+	public class SugestoesModel : PageModel
 	{
 		public Code code;
 
-		public IndexModel()
+		public SugestoesModel()
 		{
-			code = new Code(this, 0);
+			code = new Code(this, 2);
 		}
 
 		public void OnPostUpdateApplication(string action, int app_id)
