@@ -22,8 +22,8 @@ namespace ProjetoGPS_BackOffice.Pages
 
 
 
-		//public string ApiEndpoint = "https://papi-testapp2.herokuapp.com/api/";
-		public string ApiEndpoint = "https://localhost:44387/api/";
+		public string ApiEndpoint = "https://papi-testapp2.herokuapp.com/api/";
+		//public string ApiEndpoint = "https://localhost:44387/api/";
 
 
 

@@ -41,3 +41,4 @@ C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Projeto
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Duvidas.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Sugestoes.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Erro.cshtml.g.cs
+C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\ProjetoGPS_BackOffice.csproj.AssemblyReference.cache
