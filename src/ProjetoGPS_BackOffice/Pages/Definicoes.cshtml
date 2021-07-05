@@ -3,3 +3,40 @@
 @{
     ViewData["Title"] = "Definições";
 }
+
+<div>
+	<div class="d-flex justify-content-center">
+		<div style="width: 90%; padding: 10px; margin-top: 20px">
+			<form method="post">
+
+
+
+				<div>
+					<h4>Conta de Administrador</h4>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Username e Password de administrador</span>
+						</div>
+						<input type="text" name="username" class="form-control">
+						<input type="text" name="password" class="form-control">
+					</div>
+				</div>
+
+
+
+
+				<div style="margin-top: 35px">
+					<div class="form-group" style="padding: 5px">
+						<h4>Sobre o BrightStart</h4>
+						<textarea class="form-control" name="about" rows="10"></textarea>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-success" style="width: 10%" asp-page-handler="Save">Guardar</button>
+				<button type="submit" class="btn btn-secondary" style="margin-left: 1%" asp-page-handler="Restore">Restaurar</button>
+
+			</form>
+		</div>
+	</div>
+
+</div>
