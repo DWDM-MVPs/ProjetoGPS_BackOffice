@@ -154,7 +154,7 @@ namespace ProjetoGPS_BackOffice.Pages
 
 		public bool Login(string username, string password)
 		{
-			var client = new RestClient($"https://localhost:44387/api/admins/login/{username}/{password}");
+			var client = new RestClient(ApiEndpoint + $"admins/login/{username}/{password}");
 			client.Timeout = -1;
 			var request = new RestRequest(Method.GET);
 			IRestResponse response = client.Execute(request);
