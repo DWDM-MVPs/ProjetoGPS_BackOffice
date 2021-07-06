@@ -1,0 +1,88 @@
+﻿@page
+@model ProjetoGPS_BackOffice.Pages.DuvidasModel
+@{
+    ViewData["Title"] = "Mensagens";
+}
+
+<div>
+	<!-- TABS START -->
+	<ul class="nav nav-tabs" id="myTab" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active" id="pendentes-tab" data-bs-toggle="tab" data-bs-target="#pendentes" type="button" role="tab" aria-controls="home" aria-selected="true">📥 Pendentes (@Model.code.Pending.Length)</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="aceites-tab" data-bs-toggle="tab" data-bs-target="#aceites" type="button" role="tab" aria-controls="profile" aria-selected="false">✔️ Lidas (@Model.code.Accepted.Length)</button>
+		</li>
+	</ul>
+	<!-- TABS END -->
+	<!-- APPLICATIONS START -->
+	<div class="tab-content" id="myTabContent">
+		<!-- DUVIDAS PENDENTES -->
+		<div class="tab-pane fade show active margin" id="pendentes" role="tabpanel" aria-labelledby="pendentes-tab">
+			<h3>📥 Mensagens Pendentes</h3>
+			<div style="margin-top: 1%">
+				@if (Model.code.Pending.Length == 0)
+				{
+					<a>Não há mensagens pendentes.</a>
+				}
+				else
+				{
+					@foreach (var app in Model.code.Pending)
+					{
+						<div class="card" style="background-color: #f8f8f8">
+							<div class="container margin" style="margin-bottom: 1%">
+								<div>
+									<h5 style="margin-bottom: -5px">Email:</h5>
+									<a href="mailto: @app.Email">@app.Email</a>
+								</div>
+								<div style="margin-top: 10px">
+									<h5 style="margin-bottom: -5px">Mensagem:</h5>
+									<a>@app.Message</a>
+								</div>
+							</div>
+							<div style="margin-left: 1%; margin-bottom: 1%">
+								<form method="post">
+									<button type="submit" style="width: 15%; margin-left: 5px" class="btn btn-success" asp-page-handler="UpdateApplication" asp-route-action="accept" asp-route-app_id="@app.ID">Marcar como lida</button>
+								</form>
+							</div>
+						</div>
+				}
+				}
+			</div>
+		</div>
+		<!-- DUVIDAS ESCLARECIDAS -->
+		<div class="tab-pane fade margin" id="aceites" role="tabpanel" aria-labelledby="aceites-tab">
+			<h3>✔️ Mensagens Lidas</h3>
+			<div style="margin-top: 1%">
+				@if (Model.code.Accepted.Length == 0)
+				{
+					<a>Não há mensagens lidas.</a>
+				}
+				else
+				{
+					@foreach (var app in Model.code.Accepted)
+					{
+						<div class="card" style="background-color: #f8f8f8">
+							<div class="container margin" style="margin-bottom: 1%">
+								<div>
+									<h5 style="margin-bottom: -5px">Email:</h5>
+									<a href="mailto: @app.Email">@app.Email</a>
+								</div>
+								<div style="margin-top: 10px">
+									<h5 style="margin-bottom: -5px">Mensagem:</h5>
+									<a>@app.Message</a>
+								</div>
+							</div>
+							<div style="margin-left: 1%; margin-bottom: 1%">
+								<form method="post">
+									<button type="submit" style="width: 15%; margin-left: 5px" class="btn btn-secondary" asp-page-handler="UpdateApplication" asp-route-action="restore" asp-route-app_id="@app.ID">Marcar como não lida</button>
+								</form>
+							</div>
+						</div>
+				}
+				}
+			</div>
+		</div>
+	</div>
+	<!-- APPLICATIONS END -->
+</div>

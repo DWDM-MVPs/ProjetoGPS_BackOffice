@@ -13,7 +13,14 @@ namespace ProjetoGPS_BackOffice.Pages
 {
 	public class Code
 	{
-		private bool checkLogin = true;
+		public string ApiEndpoint = "https://papi-testapp2.herokuapp.com/api/";
+		//public string ApiEndpoint = "https://localhost:44387/api/";
+
+
+
+
+
+		private readonly bool checkLogin = true;
 
 		private readonly PageModel page;
 
@@ -32,22 +39,18 @@ namespace ProjetoGPS_BackOffice.Pages
 		}
 
 
-
-		public string ApiEndpoint = "https://papi-testapp2.herokuapp.com/api/";
-		//public string ApiEndpoint = "https://localhost:44387/api/";
-
-
-
-
-
 		public Application[] Applications { get; set; }
 		public Application[] Pending { get; set; }
 		public Application[] Accepted { get; set; }
 		public Application[] Rejected { get; set; }
 
 
-
-
+		public class Admin
+		{
+			public long ID { get; set; }
+			public string Username { get; set; }
+			public string Password { get; set; }
+		}
 
 		public class Application
 		{
@@ -61,17 +64,37 @@ namespace ProjetoGPS_BackOffice.Pages
 			public int Type { get; set; }
 		}
 
+		public class Placeholders
+		{
+			public string Placeholder { get; set; }
+			public string Value { get; set; }
+		}
+
 
 
 
 
 		public T GET<T>(string url)
 		{
-			var client = new RestClient(url);
+			RestClient client = new RestClient(ApiEndpoint + url);
 			client.Timeout = -1;
-			var request = new RestRequest(Method.GET);
+			RestRequest request = new RestRequest(Method.GET);
 			IRestResponse response = client.Execute(request);
 			return JsonConvert.DeserializeObject<T>(response.Content);
+		}
+
+
+		public void PUT(string url, object jsonText)
+		{
+			RestClient client = new RestClient(ApiEndpoint + url);
+			client.Timeout = -1;
+
+			RestRequest request = new RestRequest(Method.PUT);
+			request.AddHeader("Content-Type", "application/json");
+
+			string body = JsonConvert.SerializeObject(jsonText);
+			request.AddParameter("application/json", body, ParameterType.RequestBody);
+			client.Execute(request);
 		}
 
 
@@ -89,9 +112,9 @@ namespace ProjetoGPS_BackOffice.Pages
 
 		public void GetApplications(int type)
 		{
-			this.Pending = this.GET<Application[]>(ApiEndpoint + $"applications/list/{type}/0");
-			this.Accepted = this.GET<Application[]>(ApiEndpoint + $"applications/list/{type}/1");
-			this.Rejected = this.GET<Application[]>(ApiEndpoint + $"applications/list/{type}/2");
+			this.Pending = this.GET<Application[]>($"applications/list/{type}/0");
+			this.Accepted = this.GET<Application[]>($"applications/list/{type}/1");
+			this.Rejected = this.GET<Application[]>($"applications/list/{type}/2");
 
 			this.Applications = this.Pending.Concat(this.Accepted).Concat(this.Rejected).ToArray();
 		}
@@ -154,9 +177,9 @@ namespace ProjetoGPS_BackOffice.Pages
 
 		public bool Login(string username, string password)
 		{
-			var client = new RestClient(ApiEndpoint + $"admins/login/{username}/{password}");
+			RestClient client = new RestClient(ApiEndpoint + $"admins/login/{username}/{password}");
 			client.Timeout = -1;
-			var request = new RestRequest(Method.GET);
+			RestRequest request = new RestRequest(Method.GET);
 			IRestResponse response = client.Execute(request);
 
 			if (response.StatusCode == HttpStatusCode.OK)

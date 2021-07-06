@@ -23,16 +23,16 @@
 		<!-- CANDIDATURAS PENDENTES -->
 		<div class="tab-pane fade show active margin" id="pendentes" role="tabpanel" aria-labelledby="pendentes-tab">
 			<h3>⏰ Candidaturas Pendentes</h3>
-			@if (Model.code.Pending.Length == 0)
-			{
-				<a>Não há candidaturas pendentes.</a>
-			}
-			else
-			{
-				<div style="margin-top: 2%">
+			<div style="margin-top: 1%">
+				@if (Model.code.Pending.Length == 0)
+				{
+					<a>Não há candidaturas pendentes.</a>
+				}
+				else
+				{
 					@foreach (var app in Model.code.Pending)
 					{
-						<div class="card" style="margin-top: 3%; background-color: #f8f8f8">
+						<div class="card" style="background-color: #f8f8f8">
 							<div class="container margin" style="margin-bottom: 1%">
 								<div class="row">
 									<div class="col-sm">
@@ -61,23 +61,23 @@
 								</form>
 							</div>
 						</div>
-					}
-				</div>
-			}
+				}
+				}
+			</div>
 		</div>
 		<!-- CANDIDATURAS ACEITES -->
 		<div class="tab-pane fade margin" id="aceites" role="tabpanel" aria-labelledby="aceites-tab">
 			<h3>✔️ Candidaturas Aceites</h3>
-			@if (Model.code.Accepted.Length == 0)
-			{
-				<a>Não há candidaturas aceites.</a>
-			}
-			else
-			{
-				<div style="margin-top: 2%">
+			<div style="margin-top: 1%">
+				@if (Model.code.Accepted.Length == 0)
+				{
+					<a>Não há candidaturas aceites.</a>
+				}
+				else
+				{
 					@foreach (var app in Model.code.Accepted)
 					{
-						<div class="card" style="margin-top: 3%; background-color: #f8f8f8">
+						<div class="card" style="background-color: #f8f8f8">
 							<div class="container margin" style="margin-bottom: 1%">
 								<div class="row">
 									<div class="col-sm">
@@ -106,23 +106,23 @@
 								</form>
 							</div>
 						</div>
-					}
-				</div>
-			}
+				}
+				}
+			</div>
 		</div>
 		<!-- CANDIDATURAS RECUSADAS -->
 		<div class="tab-pane fade margin" id="recusadas" role="tabpanel" aria-labelledby="recusadas-tab">
 			<h3>❌ Candidaturas Recusadas</h3>
-			@if (Model.code.Rejected.Length == 0)
-			{
-				<a>Não há candidaturas aceites.</a>
-			}
-			else
-			{
-				<div style="margin-top: 2%">
+			<div style="margin-top: 1%">
+				@if (Model.code.Rejected.Length == 0)
+				{
+					<a>Não há candidaturas aceites.</a>
+				}
+				else
+				{
 					@foreach (var app in Model.code.Rejected)
 					{
-						<div class="card" style="margin-top: 3%; background-color: #f8f8f8">
+						<div class="card" style="background-color: #f8f8f8">
 							<div class="container margin" style="margin-bottom: 1%">
 								<div class="row">
 									<div class="col-sm">
@@ -151,9 +151,9 @@
 								</form>
 							</div>
 						</div>
-					}
-				</div>
-			}
+				}
+				}
+			</div>
 		</div>
 	</div>
 	<!-- APPLICATIONS END -->

@@ -5,38 +5,174 @@
 }
 
 <div>
-	<div class="d-flex justify-content-center">
-		<div style="width: 90%; padding: 10px; margin-top: 20px">
-			<form method="post">
+	<form method="post">
 
 
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="inicio-tab" data-bs-toggle="tab" data-bs-target="#inicio" type="button" role="tab" aria-controls="inicio" aria-selected="true">🏡 Inicio</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="contactos-tab" data-bs-toggle="tab" data-bs-target="#contactos" type="button" role="tab" aria-controls="contactos" aria-selected="false">📔 Contactos</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="sobre-tab" data-bs-toggle="tab" data-bs-target="#sobre" type="button" role="tab" aria-controls="sobre" aria-selected="false">ℹ Sobre</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="testemunhos-tab" data-bs-toggle="tab" data-bs-target="#testemunhos" type="button" role="tab" aria-controls="testemunhos" aria-selected="false">🧑 Testemunhos</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button" role="tab" aria-controls="admin" aria-selected="false">🗝 Admin</button>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
 
+
+			<div class="tab-pane fade margin show active" id="inicio" role="tabpanel" aria-labelledby="inicio-tab">
 				<div>
-					<h4>Conta de Administrador</h4>
-					<div class="input-group">
+					<h5>Sobre o BrightStart</h5>
+					<textarea class="form-control" name="iAbout" rows="5">@Model.iAbout.Value</textarea>
+				</div>
+				<div style="margin-top: 50px">
+					<h5>Onde podes, começar a tua carreira?</h5>
+					<textarea class="form-control" name="iWhere" rows="5">@Model.iWhere.Value</textarea>
+				</div>
+				<div style="margin-top: 50px">
+					<h5>Porquê o BrightStart?</h5>
+					<textarea class="form-control" name="iWhy" rows="5">@Model.iWhy.Value</textarea>
+				</div>
+			</div>
+
+
+			<div class="tab-pane fade margin" id="contactos" role="tabpanel" aria-labelledby="contactos-tab">
+				<div>
+					<h5>Instituto Politécnico de Setúbal</h5>
+					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text">Username e Password de administrador</span>
+							<span class="input-group-text">E-mail</span>
 						</div>
-						<input type="text" name="username" class="form-control">
-						<input type="text" name="password" class="form-control">
+						<input class="form-control" type="text" name="cIpsEmail" value="@Model.cIpsEmail.Value" />
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Telefone</span>
+						</div>
+						<input class="form-control" type="text" name="cIpsTel" value="@Model.cIpsTel.Value" />
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Website</span>
+						</div>
+						<input class="form-control" type="text" name="cIpsWeb" value="@Model.cIpsWeb.Value" />
 					</div>
 				</div>
-
-
-
-
-				<div style="margin-top: 35px">
-					<div class="form-group" style="padding: 5px">
-						<h4>Sobre o BrightStart</h4>
-						<textarea class="form-control" name="about" rows="10"></textarea>
+				<div style="margin-top: 50px">
+					<h5>Instituto Politécnico de Viseu</h5>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">E-mail</span>
+						</div>
+						<input class="form-control" type="text" name="cIpvEmail" value="@Model.cIpvEmail.Value" />
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Telefone</span>
+						</div>
+						<input class="form-control" type="text" name="cIpvTel" value="@Model.cIpvTel.Value" />
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Website</span>
+						</div>
+						<input class="form-control" type="text" name="cIpvWeb" value="@Model.cIpvWeb.Value" />
 					</div>
 				</div>
+				<div style="margin-top: 50px">
+					<h5>Instituto Politécnico de Leiria</h5>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">E-mail</span>
+						</div>
+						<input class="form-control" type="text" name="cIplEmail" value="@Model.cIplEmail.Value" />
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Telefone</span>
+						</div>
+						<input class="form-control" type="text" name="cIplTel" value="@Model.cIplTel.Value" />
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Website</span>
+						</div>
+						<input class="form-control" type="text" name="cIplWeb" value="@Model.cIplWeb.Value" />
+					</div>
+				</div>
+			</div>
 
-				<button type="submit" class="btn btn-success" style="width: 10%" asp-page-handler="Save">Guardar</button>
-				<button type="submit" class="btn btn-secondary" style="margin-left: 1%" asp-page-handler="Restore">Restaurar</button>
 
-			</form>
+			<div class="tab-pane fade margin" id="sobre" role="tabpanel" aria-labelledby="sobre-tab">
+				<div class="form-group">
+					<h4>Sobre o BrightStart</h4>
+					<textarea class="form-control" name="about" rows="10">@Model.about.Value</textarea>
+				</div>
+			</div>
+
+
+			<div class="tab-pane fade margin" id="testemunhos" role="tabpanel" aria-labelledby="testemunhos-tab">
+				<div>
+					<h5>Testemunho #1</h5>
+					<input class="form-control" type="text" name="t1n" value="@Model.t1n.Value">
+					<div class="form-group" style="margin-top: 5px">
+						<textarea class="form-control" name="t1d" rows="10">@Model.t1d.Value</textarea>
+					</div>
+				</div>
+				<div style="margin-top: 50px">
+					<h5>Testemunho #2</h5>
+					<input class="form-control" type="text" name="t2n" value="@Model.t2n.Value">
+					<div class="form-group" style="margin-top: 5px">
+						<textarea class="form-control" name="t2d" rows="10">@Model.t2d.Value</textarea>
+					</div>
+
+				</div>
+				<div style="margin-top: 50px">
+					<h5>Testemunho #3</h5>
+					<input class="form-control" type="text" name="t3n" value="@Model.t3n.Value">
+					<div class="form-group" style="margin-top: 5px">
+						<textarea class="form-control" name="t3d" rows="10">@Model.t3d.Value</textarea>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="tab-pane fade margin" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+				<h4>Conta de Administrador</h4>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Username</span>
+					</div>
+					<input type="text" name="username" class="form-control" value="@Model.admin.Username" />
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Password</span>
+					</div>
+					<input type="text" name="password" class="form-control" value="@Model.admin.Password" />
+				</div>
+			</div>
 		</div>
-	</div>
 
+
+
+
+
+
+
+
+
+		<div class="margin" style="margin-top: 20px">
+			<button type="submit" class="btn btn-success" style="width: 10%" asp-page-handler="Save">Guardar</button>
+			<button type="submit" class="btn btn-secondary" style="width: 10%; margin-left: 1%" asp-page-handler="Restore">Restaurar</button>
+		</div>
+	</form>
 </div>

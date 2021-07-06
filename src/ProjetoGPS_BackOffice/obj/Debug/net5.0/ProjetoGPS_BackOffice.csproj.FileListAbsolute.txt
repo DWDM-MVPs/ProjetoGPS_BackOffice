@@ -141,13 +141,11 @@ C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Projeto
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\ProjetoGPS_BackOffice.TagHelpers.output.cache
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\ProjetoGPS_BackOffice.RazorCoreGenerate.cache
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Definicoes.cshtml.g.cs
-C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Duvidas.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Login.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Logout.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Sugestoes.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\ProjetoGPS_BackOffice.RazorTargetAssemblyInfo.cache
@@ -158,3 +156,4 @@ C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Projeto
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\ref\ProjetoGPS_BackOffice.dll
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\ProjetoGPS_BackOffice.pdb
 C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\ProjetoGPS_BackOffice.genruntimeconfig.cache
+C:\Users\milke\Desktop\ProjetoGPS\ProjetoGPS_BackOffice\obj\Debug\net5.0\Razor\Pages\Mensagens.cshtml.g.cs
